@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
+
 *{
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
@@ -64,6 +65,7 @@ section div a{
 
 #botonPrincipal{
 	grid-area: botonPrincipal;
+	display: flex;
 }
 
 #productos{
@@ -114,7 +116,24 @@ section div a{
 			font-weight: 600;
 		}
 
+@keyframes animateLogo{
+	0%{width: 75px}
+	25%{width: 100px}
+	50%{width: 125px; color: grey}
+	75%{width: 150px}
+	100%{width: 200px}
+}
+
+.animate {
+	animation-name: animateLogo;
+	animation-iteration-count: initial;
+	animation-timing-function: linear;
+	animation-duration: 5s;
+}
+
+
 .botonPedido{
+	display: flex;
 	margin-top: 30px;
 	margin-bottom: 10px;
 	background-color: white;
@@ -128,8 +147,13 @@ section div a{
 	justify-content: center;
 }
 
+.transform:hover{
+	transform: translate(10px, -10px);
+	cursor: pointer;
+}
+
 .titulos{
-	display: block;
+	display: inline-block;
 }
 
 .titulos h1{
@@ -139,6 +163,7 @@ section div a{
 	margin: 10px 10px 10px 10px;
 	text-align: center;
 	justify-items: center;
+	align-items: center;
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -149,6 +174,7 @@ section div a{
 	flex-direction: column;
 	align-items: center;	
 	justify-content: center;
+	align-content: center;
 	overflow-x: auto;
 }
 
@@ -157,6 +183,7 @@ section div a{
 	background-color: white;
 	margin: 10px 0px;
 	align-items: center;
+
 }
 
 .caja figure img{
@@ -165,10 +192,10 @@ section div a{
 	height: 100px;	
 	align-content: center;
 	margin: 10px;
+	justify-content: space-between;
 }
 
 .caja figure figcaption{
-	
 	font-size: 2em;
 	font-weight: 400;
 	text-align: center;
@@ -180,6 +207,8 @@ main section figure p{
 	color: black;
 	font-size: 1.5em;
 	font-weight: 300;
+	text-align: justify-all;
+	justify-items: space-between;
 }
 
 .footer{
@@ -358,11 +387,15 @@ main section figure p{
 		font-size: 2.5em;
 		margin-left: 30px;
 		margin-top: 30px;
+		margin-bottom: 30px;
 	}
 
 	.titulos  div img{
 		width: 50%;
 		height: auto;
-		margin: 50px 60px;
+		margin: 50px 400px;
+		display: flex;
+		align-items: center;
+
 	}
 }
